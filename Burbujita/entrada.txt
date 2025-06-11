@@ -1,0 +1,25 @@
+programa OrdenamientoBurbuja;
+
+función ordenar(vector arreglo)
+    entero i;
+    entero j;
+    entero temp;
+    entero tamaño := longitud(arreglo);
+
+    repetir (i := 0; i < tamaño - 1; i := i + 1)
+        repetir (j := 0; j < tamaño - i - 1; j := j + 1)
+            si (arreglo[j] > arreglo[j + 1])
+                temp := arreglo[j];
+                arreglo[j] := arreglo[j + 1];
+                arreglo[j + 1] := temp;
+            fin
+        fin
+    fin
+
+    mostrar(arreglo);
+fin
+
+iniciar
+    vector miArreglo := [5, 3, 2, 4, 1];
+    ordenar(miArreglo);
+fin
